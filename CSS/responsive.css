@@ -3,6 +3,20 @@
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .wrapper .dynamic-txt li,
+    .wrapper .static-txt{
+        font-size: 30px;
+    }
+    .wrapper .dynamic-txt{
+        margin-left: 15px;
+        height: 45px;
+        line-height: 45px;
+      }
+      @keyframes slide{
+        100%{
+              top: 0;
+        }
+    }
 }
 
 

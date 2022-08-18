@@ -459,6 +459,59 @@ color: var(--text-black-600);
 margin: 0;
 text-transform: capitalize;
 }
+ /* dynamic identity starts */
+.wrapper
+{
+    display: inline-flex;
+}
+.wrapper .static-txt{
+    color: var(--text-black-600);
+    font-size: 45px;
+    font-weight: 500;
+}
+.wrapper .dynamic-txt{
+  margin-left: 15px;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+}
+.dynamic-txt li{
+    color: var(--skin-color);
+    list-style: none;
+    font-size: 45px;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+          top: -240px;
+    }
+}
+.dynamic-txt li span{
+    position: relative;
+}
+.dynamic-txt li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-black-50);
+    border-left: 2px solid #fc6d60;
+    animation: typing 3s steps(15) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+ /* dynamic identity End */
+
+
+
 .home-section .home-text .btn-1{
     margin-top: 30px;
 }
