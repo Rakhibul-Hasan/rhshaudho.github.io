@@ -8,7 +8,7 @@
         font-size: 30px;
     }
     .wrapper .dynamic-txt{
-        margin-left: 15px;
+        margin-left: 0;
         height: 45px;
         line-height: 45px;
       }
@@ -38,12 +38,18 @@
     .home-section .home-text{
         text-align: center;
     }
+    .home-section .home-text a .btnn{
+        order: 3;
+    }
     .home-section .full-screen{
         padding: 100px 0;
     }
     .home-section .home-img .img-box{
         margin-bottom: 40px;
         max-width: 350px;
+    }
+    .wrapper .static-txt{
+        display: none;
     }
     .effect-3{
         margin-left: -60px;
