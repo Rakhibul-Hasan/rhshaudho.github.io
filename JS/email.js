@@ -8,6 +8,6 @@ function sendEmail(){
         + "<br> Email : " + document.getElementById("email").value
         +"<br> Message : " + document.getElementById("message").value
     }).then(
-      message => alert(message)
+      message => alert("Message sent successfully.")
     );
 }
