@@ -163,7 +163,7 @@ img{
 }
 .effect-4{
     border-top: 30px solid transparent;
-    border-left: 30px solid #06d79c;
+    border-left: 30px solid #06d79c; 
     left: 30%;
     top: 20%;
     animation: spin 15s linear infinite;
@@ -190,7 +190,7 @@ img{
 }
 .effect-5 div{
     width: 2px;
-    background-color: #4dd0e1;
+    background-color: #4dd0e1; 
 }
 @keyframes spin{
     0%{
@@ -499,7 +499,7 @@ text-transform: capitalize;
     height: 100%;
     width: 100%;
     background: var(--bg-black-50);
-    border-left: 2px solid #fc6d60;
+    border-left: 2px solid var(--skin-color);
     animation: typing 3s steps(15) infinite;
 }
 @keyframes typing{
@@ -648,7 +648,7 @@ margin: 0 0 10px;
     position: relative;
 }
 .about-section .skills .skill-items .progress-bar{
-    background-color: var(--text-black-600);
+    background-image: linear-gradient(90deg,rgb(45, 45, 55), var(--skin-color) );
     height: 6px;
     left: 7px;
     top: 7px;
