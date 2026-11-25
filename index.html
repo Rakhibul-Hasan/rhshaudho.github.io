@@ -1,616 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaudhos Portfolio Website</title>
-    <!-- font awesome -->
-    <link rel="stylesheet" type="text/css" href="CSS/font-awesome.css">
-<!-- main css-->
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <!------------ responsive css ------ -->
-    <link rel="stylesheet" type="text/css" href="CSS/responsive.css">
-<!-- Default color skin -->
-    <link rel="stylesheet" type="text/css" href="CSS/skins/color-1.css">
-    <!-- -------- style switcher ------ -->
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="CSS/skins/color-1.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-2" href="CSS/skins/color-2.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="CSS/skins/color-3.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="CSS/skins/color-4.css" disabled>
-    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="CSS/skins/color-5.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style-switcher.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Rakhibul Hasan | Medical Image Analysis & Explainable AI</title>
+<meta name="description" content="Md. Rakhibul Hasan, M.Sc. researcher at IIT, Jahangirnagar University. Deep learning, medical image analysis, explainable AI and clinical decision support.">
+<meta name="author" content="Md. Rakhibul Hasan">
+<link rel="canonical" href="https://rakhibul-hasan.github.io/rhshaudho.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Md. Rakhibul Hasan | Medical Image Analysis & Explainable AI">
+<meta property="og:description" content="Researcher in deep learning for medical imaging and explainable AI. IIT, Jahangirnagar University.">
+<meta property="og:url" content="https://rakhibul-hasan.github.io/rhshaudho.github.io/">
+<meta name="theme-color" content="#0f2233">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f2233'/%3E%3Ccircle cx='38' cy='26' r='12' fill='%23e8a33d'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Md. Rakhibul Hasan","alternateName":"Rakhibul Hasan Shaudho","jobTitle":"Researcher and M.Sc. Student","affiliation":{"@type":"CollegeOrUniversity","name":"Institute of Information Technology, Jahangirnagar University"},"email":"mailto:rakhibulhasan98@gmail.com","url":"https://rakhibul-hasan.github.io/rhshaudho.github.io/","sameAs":["https://orcid.org/0009-0003-5318-232X","https://github.com/Rakhibul-Hasan","https://scholar.google.com/citations?user=uJrXkCUAAAAJ","https://www.researchgate.net/profile/Md-Hasan-1355","https://www.linkedin.com/in/rakhibul-hasan-shaudho-7ab26b1a"]}
+</script>
+<style>
+:root{--bg:#f3f6f8;--surface:#e8eef2;--ink:#0f2233;--muted:#4b6072;--line:#cbd6de;--accent:#0b6f7a;--heat:#e8a33d;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+:root[data-theme="dark"]{--bg:#0b1620;--surface:#122230;--ink:#e6eef4;--muted:#9bb0c0;--line:#25394a;--accent:#4fc3cf}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1620;--surface:#122230;--ink:#e6eef4;--muted:#9bb0c0;--line:#25394a;--accent:#4fc3cf}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--heat);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font:700 1.05rem var(--serif);color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:6px 10px;border-radius:6px;color:var(--muted);text-decoration:none;font-size:.93rem}
+nav a:hover,nav a.on{color:var(--ink);background:var(--surface)}
+.tools{display:flex;gap:6px}
+.ibtn{border:1px solid var(--line);background:transparent;color:var(--ink);width:38px;height:38px;border-radius:8px;cursor:pointer;font-size:1rem}
+.ibtn:hover{background:var(--surface)}
+#menu{display:none}
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+h1{font:700 clamp(2.3rem,5vw,3.6rem)/1.08 var(--serif);margin:0 0 18px;letter-spacing:-.01em}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.scan{--x:58%;--y:40%;position:relative;aspect-ratio:1;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 50%,#1a3a4f 0,#0f2233 70%);box-shadow:0 0 0 1px var(--line),0 24px 60px -24px rgba(15,34,51,.55);cursor:crosshair}
+.scan::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 22px,rgba(255,255,255,.07) 22px 23px)}
+.scan::after{content:"";position:absolute;inset:0;background:conic-gradient(from 20deg at 50% 50%,transparent 0 40deg,rgba(255,255,255,.06) 40deg 41deg,transparent 41deg 118deg,rgba(255,255,255,.06) 118deg 119deg,transparent 119deg 230deg,rgba(255,255,255,.06) 230deg 231deg,transparent 231deg)}
+.heat{position:absolute;left:var(--x);top:var(--y);width:62%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,214,102,.95) 0,rgba(232,163,61,.7) 22%,rgba(220,80,60,.35) 45%,transparent 68%);mix-blend-mode:screen;transition:left .25s ease-out,top .25s ease-out;z-index:1}
+.scan.idle .heat{animation:drift 9s ease-in-out infinite alternate}
+@keyframes drift{from{left:60%;top:38%}to{left:42%;top:58%}}
+.scan-cap{margin:10px 0 0;text-align:center;font-size:.82rem;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px 1fr;gap:32px}
+h2{font:700 1.5rem/1.2 var(--serif);margin:0}
+h3{font:700 1.08rem/1.35 var(--serif);margin:0}
+.row>div>p:first-child{margin-top:0}
+.item{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:0 0 26px}
+.item:last-child{padding-bottom:0}
+.when{color:var(--muted);font-size:.92rem;padding-top:2px}
+.item p{margin:6px 0 0;color:var(--muted)}
+.meta{font-size:.93rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--surface);padding:3px 12px;border-radius:999px;font-size:.92rem}
+.skillgrp{margin:0 0 18px}
+.skillgrp h3{margin-bottom:8px;font-family:var(--sans);font-size:.95rem;color:var(--muted);font-weight:600}
+.about{display:grid;grid-template-columns:132px 1fr;gap:24px;align-items:start}
+.about img{width:132px;height:132px;object-fit:cover;border-radius:50%;border:1px solid var(--line);background:var(--surface)}
+.about p{margin:0 0 14px}
+.contact a.big{font:700 clamp(1.2rem,3vw,1.7rem) var(--serif);word-break:break-all}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 0;padding:0;list-style:none}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;padding-top:44px}.scan{max-width:360px;margin:0 auto}
+ .row{grid-template-columns:1fr;gap:16px}
+ #menu{display:inline-block}
+ nav{position:absolute;left:0;right:0;top:60px;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+ nav.open{display:block}nav ul{flex-direction:column;padding:10px 24px}
+ .item{grid-template-columns:1fr;gap:2px}
+ .about{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scan.idle .heat{animation:none}.heat{transition:none}}
+</style>
 </head>
 <body>
-    
-    <!-- header start-->
-    <header class="header">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="logo">
-                    <a href="index.html">S</a>
-                </div>
-                <div class="hamburger-btn outer-shadow hover-in-shadow">
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header end-->
-    <!-- Navigation menu start -->
-    <nav class="nav-menu">
-        <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
-        <div class="nav-menu-inner">
-            <ul>
-                <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
-                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About</a></li>
-                <li><a href="#services" class="link-item outer-shadow hover-in-shadow">Services</a></li>
-                <!-- <li><a href="#" class="link-item outer-shadow hover-in-shadow" onclick="alert('Not Yet Available')">My projects</a></li> -->
-                <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">Testimonial</a></li>
-                <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">Contact</a></li>
-            </ul>
-        </div>
-        <!-- copyright text -->
-        <p class="copyright-text">&copy; 2022 RH Shaudho</p>
-    </nav>
-    <div class="fade-out-effect">
-    </div>
-    <!-- Navigation menu end   -->
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="#top">Md. Rakhibul Hasan</a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+  <div class="tools">
+   <button class="ibtn" id="theme" aria-label="Switch light or dark theme" title="Switch theme">◐</button>
+   <button class="ibtn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+</header>
 
-    <!-- Home section start -->
-    <section class="home-section section active" id="home">
-        <!-- Effect Wrap Start -->
-        <div class="effect-wrap">
-            <div class="effect effect-1"></div>
-            <div class="effect effect-2">
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-                <div></div><div></div><div></div><div></div>
-            </div>
-            <div class="effect effect-3"></div>
-            <div class="effect effect-4"></div>
-            <div class="effect effect-5">
-                 <div></div> <div></div> <div></div> <div></div> <div></div> 
-                 <div></div> <div></div> <div></div> <div></div> <div></div> 
-                </div>
-        </div>
-        <!-- Effect Wrap End -->
-        <div class="row full-screen align-items-center">
-            <div class="home-text">
-                <p>Hello</p>
-                <h2>I'm RH Shaudho</h2>
-
-
-                <div class="wrapper">
-                    <div class="static-txt">I'm</div>
-                    <ul class="dynamic-txt">
-                        <li><span>Student</span></li>
-                        <li><span>Programmer</span></li>
-                        <li><span>R&D Engineer</span></li>
-                        <li><span>Full Stack Developer</span></li>
-                        <li><span>Tuition Teacher</span></li>
-                    </ul>
-                </div>
-
-                <div class="btnn">
-                <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More about me</a>
-                </div>
-            </div>
-            <div class="home-img">
-                <div class="img-box inner-shadow">
-                    <img src="images/photo.png" class="outer-shadow" alt="Display Picture">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Home section end -->
-    <!-- About section start -->
-    <section class="about-section section" id="about" >
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="main info">About me</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-img">
-                    <div class="img-box inner-shadow">
-                        <img src="images/with_tortoise-portfolio3.png" class="outer-shadow" alt="Display Picture">
-                    </div>
-                    <!-- social links start -->
-                    <div class="social-links">
-                        <a href="https://web.facebook.com/rakhibulhasan.shaudho.7/" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a> 
-                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-twitter"></i></a> 
-                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-whatsapp"></i></a> 
-                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a> 
-                    </div>
-                    <!-- social links end -->
-                </div>
-                <div class="about-info">
-                    
-                    <p>
-                        <span>Hi! I'm Rakhibul Hasan Shaudho.</span>
-                        I'm an AI researcher and computer science graduate from the
-                        Institute of Information Technology (IIT), Jahangirnagar University.
-                        My research interests include Artificial Intelligence, Deep Learning,
-                        Computer Vision, Medical Image Analysis, and Explainable AI.
-                        I'm particularly interested in developing reliable and interpretable
-                        AI solutions to address real-world challenges, especially in healthcare.
-                    </p>
-
-                    <p>
-                        My research includes a first-author journal publication in
-                        <i>Expert Systems with Applications</i> (Q1, Elsevier), focusing on
-                        3D MRI reconstruction and brain tumor diagnosis using deep learning
-                        and explainable AI. I also have a first-author conference paper on
-                        diabetic retinopathy grading accepted at TEHI 2025.
-                    </p>
-
-                    <p>
-                        Beyond research, I have professional experience as an R&D Engineer
-                        in the Routing team at BDCOM, where I worked on network device software
-                        development, routing technologies, and embedded systems. This experience
-                        strengthened my knowledge of systems programming, computer networks,
-                        and practical software engineering.
-                    </p>
-
-                    <p>
-                        My journey in computer science began with competitive programming
-                        and problem solving. I have participated in ICPC regional contests,
-                        received Honorable Mentions in multiple regional contests, and achieved
-                        the Codeforces Specialist rank. I have also enjoyed sharing my knowledge
-                        through programming and machine learning workshops.
-                    </p>
-
-                    <p>
-                        I enjoy exploring new ideas, conducting research, and building solutions
-                        that connect theoretical knowledge with practical applications.
-                        I aspire to contribute to academia and advance impactful
-                        AI-driven technologies through research, teaching, and innovation.
-                    </p>
-                    <a href="Resume/Rakhibul_Hasan_Lecturer_Resume.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
-                </div>
-            </div>
-            <!-- About tabs start  -->
-            <div class="row">
-                <div class="about-tabs">
-                    <span class="tab-items outer-shadow active" data-target=".skills">skills</span>
-                    <span class="tab-items" data-target=".experience">experience</span>
-                    <span class="tab-items" data-target=".education">education</span>
-                </div>
-            </div>
-            <!-- About tabs End  -->
-
-            <!-- Skills start  -->
-            <div class="row">
-                <div class="skills tab-content active">
-                    <div class="row">
-                         <!-- skills item start -->
-                         <div class="skill-items">
-                             <p>HTML</p>
-                             <div class="progress inner-shadow">
-                                <div class="progress-bar" style="width: calc(50% - 14px);">
-                                  <span>50%</span>
-                              </div>
-                             </div>
-                         </div>
-                       <!-- skills item end -->
-                         <!-- skills item start -->
-                          <div class="skill-items">
-                        <p>Javascript</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(50% - 14px);">
-                           <span>50%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>C</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(80% - 14px);">
-                           <span>80%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>CSS</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(60% - 14px);">
-                           <span>60%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>C++</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(80% - 14px);">
-                           <span>80%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>Java</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(40% - 14px);">
-                           <span>40%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>PHP</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(45% - 14px);">
-                           <span>45%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                      <!-- skills item start -->
-                      <div class="skill-items">
-                        <p>Bootstrap</p>
-                       <div class="progress inner-shadow">
-                          <div class="progress-bar" style="width: calc(50% - 14px);">
-                           <span>50%</span>
-                            </div>
-                          </div>
-                        </div>
-                      <!-- skills item end -->
-                    </div>
-                </div>
-            </div>
-            <!-- Skills end -->
-            <!-- experience start  -->
-            <div class="row">
-                <div class="experience tab-content">
-                    <div class="row">
-                        <div class="timeline">
-                            <div class="row">
-                                <!-- timeline item start  -->
-                                <div class="timeline-item">
-                                    <div class="timeline-item-inner outer-shadow">
-                                        <i class="fas fa-briefcase icon"></i>
-                                        <span>Dec, 2019 - Present</span>
-                                        <h3>Home Tutor</h3>
-                                        <h4>At JU Campus/Home</h4>
-                                        <p>I teach physics and Math to students who are preparing for SSC,HSC or Admission
-                                            exam. I also teached Biology and Chemistry to SSC or HSC students.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- timeline item end -->
-                                    <!-- timeline item start  -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-briefcase icon"></i>
-                                            <span>June, 2020 - Present</span>
-                                            <h3>Coaching Tutor</h3>
-                                            <h4>At Carpe Diem</h4>
-                                            <p>I teached students in 4 coaching centers.And currently I'm teaching physics and
-                                                 Math to students who are preparing for HSC exam on Carpe Diem Coaching Center.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item end -->
-                                    <!-- timeline item start  -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-briefcase icon"></i>
-                                            <span>March, 2020 - Present</span>
-                                            <h3>Full Stack Developer</h3>
-                                            <h4>Shaudhos Hub</h4>
-                                            <p>I'm currently studying front end and backend developing. And trying to do some small
-                                             projects on my own.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- experience end -->
-
-            <!-- education start  -->
-            <div class="row">
-                <div class="education tab-content">
-                    <div class="row">
-                        <div class="timeline">
-                            <div class="row">
-                                <!-- timeline item start  -->
-                                <div class="timeline-item">
-                                    <div class="timeline-item-inner outer-shadow">
-                                        <i class="fas fa-graduation-cap icon"></i>
-                                        <span>2020 - Present</span>
-                                        <h3>B.Sc in IIT</h3>
-                                        <h4>IIT,Jahangirnagar University</h4>
-                                        <p>I'm currently studying software engineering in IIT,JU. And passed my first 3 semester
-                                            with CGPA 3.84, 3.89 and 3.94 respectively out of 4.00 scale.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- timeline item end -->
-                                    <!-- timeline item start  -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-graduation-cap icon"></i>
-                                            <span>2017- 2019</span>
-                                            <h3>HSC in Science</h3>
-                                            <h4>Kaunia College,Rangpur</h4>
-                                            <p> I completed my higher secondary school education under Dinajpur Board with GPA 5.00 
-                                                out of GPA 5.00 scale.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item end -->
-                                    <!-- timeline item start  -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-graduation-cap icon"></i>
-                                            <span>2007-2017</span>
-                                            <h3>SSC in Science</h3>
-                                            <h4>Tepamadhupur BL High School</h4>
-                                            <p>I completed my Secondary school education under Dinajpur Board. I obtained GPA 5.00 with 
-                                                scholarship in PSC and JSC. And secured GPA 5.00 out of GPA 5.00 scale in SSC too.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- education end -->
-        </div>
-    </section>
-    <!-- About section end -->
-    <!-- service section start  -->
-    <section class="service-section section" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                <h2 data-heading="services"> What i do</h2>
-                </div>
-            </div>
-            <div class="row">
-                <!-- service item start  -->
-                <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3> Teaching Practically</h3>
-                        <p>I try to make things easier to understand by parallel examples in a fun way. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-                 <!-- service item start  -->
-                 <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3> Web Design</h3>
-                        <p>I can design websites for many purposes as per client demand. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-                 <!-- service item start  -->
-                 <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-desktop"></i>
-                        </div>
-                        <h3> Clean Code</h3>
-                        <p>I care about making my code clear and easy to understand. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-                 <!-- service item start  -->
-                 <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-file-code"></i>
-                        </div>
-                        <h3> Building Application</h3>
-                        <p>I created applications like cricket scoreboard sheet, a few games etc. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-                 <!-- service item start  -->
-                 <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-code"></i>
-                        </div>
-                        <h3> Problem Solving</h3>
-                        <p>Basically I'm a problem solver,who solves problems on online judges. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-                 <!-- service item start  -->
-                 <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                        <i class="fas fa-image"></i>
-                        </div>
-                        <h3> Photography</h3>
-                        <p>I love photography as my passion. And capture good photos of nature and people. </p>
-                    </div>
-                </div>
-                <!-- service item end -->
-            </div>
-        </div>
-    </section>
-    <!-- service section End -->
-
-    <!-- Testimonial Sectioon start  -->
-     <section class="testimonial-section section" id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="testimonial">Client Speak</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="testi-box">
-                    <div class="testi-slider outer-shadow">
-                        <div class="testi-slider-container">
-                            <!-- testi item start  -->
-                            <div class="testi-item">
-                                <i class="fas fa-quote-left left"></i>
-                                <i class="fas fa-quote-right right"></i>
-                               
-                                <img src="images/Female_icon.png" alt="Student" class="inner-shadow">
-                                <span>Nusrat Priya</span>
-                                <p>He is a very  talented, skilled teacher. He is friendly and helpful person.He explains in a very easy way which is difficult to read. He truly care about his students.</p>
-                            </div>
-                            <!-- testi item end -->
-                            <!-- testi item start  -->
-                            <div class="testi-item active">
-                                <i class="fas fa-quote-left left"></i>
-                                <i class="fas fa-quote-right right"></i>
-                                <img src="images/male_icon.png" alt="Student" class="inner-shadow">
-                                <span>RI Ridoy</span>
-                                <p> He is very good man with nice humor and personality.</p>
-                            </div>
-                            <!-- testi item end -->
-                            <!-- testi item start  -->
-                            <div class="testi-item">
-                                <i class="fas fa-quote-left left"></i>
-                                <i class="fas fa-quote-right right"></i>
-                                <img src="images/Female_icon.png" alt="Student" class="inner-shadow">
-                                <span>Fahmida Mukta</span>
-                                <p>He is very talented. His teaching style is very kind and efficient. Due to his good teaching approach students like him most.</p>
-                            </div>
-                            <!-- testi item end -->
-                        </div>
-                    </div>
-                    <div class="testi-slider-nav">
-                        <span class="prev outer-shadow hover-in-shadow"><i class="fas fa-angle-left"></i></span>
-                        <span class="next outer-shadow hover-in-shadow"><i class="fas fa-angle-right"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> 
-    <!-- Testimonial Section end -->
-
-
-    <!-- contact section start -->
-<section class="contact-section section" id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2 data-heading="contact">Get In Touch</h2>
-            </div>
-        </div>
-        <div class="row">
-            <!-- contact item start  -->
-            <div class="contact-item">
-                <div class="contact-item-inner outer-shadow">
-                    <i class="fas fa-phone"></i>
-                    <span>Phone</span>
-                    <p>+8801720688056</p>
-                </div>
-            </div>
-            <!-- contact item end -->
-             <!-- contact item start  -->
-             <div class="contact-item">
-                <div class="contact-item-inner outer-shadow">
-                    <i class="fas fa-envelope"></i>
-                    <span>E-mail</span>
-                    <p>shaudhorakhibulhasan@gmail.com</p>
-                </div>
-            </div>
-            <!-- contact item end -->
-             <!-- contact item start  -->
-             <div class="contact-item">
-                <div class="contact-item-inner outer-shadow">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Address</span>
-                    <p>Gerua, JU, Savar, Dhaka</p>
-                </div>
-            </div>
-            <!-- contact item end -->
-        </div>
-        <div class="row">
-            <div class="contact-form">
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <div class="row">
-                        <div class="w-50">
-                            <div class="input-group outer-shadow hover-in-shadow">
-                                <input id="name" type="text" placeholder="Name" class="input-control" required>
-                            </div>
-                            <div class="input-group outer-shadow hover-in-shadow">
-                                <input id="email" type="text" placeholder="E-mail" class="input-control" required>
-                            </div>
-                            <div class="input-group outer-shadow hover-in-shadow">
-                                <input id="subject" type="text" placeholder="Subject" class="input-control" required>
-                            </div>
-                        </div>
-                        <div class="w-50">
-                            <div class="input-group outer-shadow hover-in-shadow">
-                                <textarea id="message" class="input-control" placeholder="Message" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="submit-btn">
-                            <button class="btn-1 outer-shadow hover-in-shadow" type="submit">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!---- contact section end ----->
-
-<!-- --- style switcher start --- -->
-<div class="style-switcher outer-shadow">
-    <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
-        <i class="fas fa-cog fa-spin"></i>
-    </div>
-    <div class="day-night s-icon outer-shadow hover-in-shadow">
-        <i class="fas "></i>
-    </div>
-    <h4>Theme Colors</h4>
-    <div class="colors">
-        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-    </div>
+<main id="top">
+<div class="wrap">
+ <div class="hero">
+  <div>
+   <h1>Making medical AI that clinicians can check.</h1>
+   <p class="lead">I’m Rakhibul Hasan, an M.Sc. researcher at the Institute of Information Technology, Jahangirnagar University. I build deep learning models for medical images and work on explaining why they decide what they decide. I’m open to PhD positions and research collaborations.</p>
+   <div class="btns">
+    <a class="btn primary" href="Resume/Rakhibul_Hasan_Lecturer_Resume.pdf">Download CV</a>
+    <a class="btn" href="#publications">Read my papers</a>
+    <a class="btn" href="mailto:rakhibulhasan98@gmail.com">Email me</a>
+   </div>
+  </div>
+  <figure style="margin:0" aria-hidden="true">
+   <div class="scan idle" id="scan"><div class="heat"></div></div>
+   <figcaption class="scan-cap">Saliency heatmap over a scan. Move your pointer to shift the focus.</figcaption>
+  </figure>
+ </div>
 </div>
-<!-- --- style switcher end --- -->
 
- <!-- main js  -->
- <script src="JS/main_js.js"></script>
+<section id="about"><div class="wrap"><div class="row">
+ <h2>About</h2>
+ <div>
+  <div class="about">
+   <img src="images/photo.png" alt="Portrait of Md. Rakhibul Hasan" onerror="this.style.display='none'">
+   <div>
+    <p>I work on medical image analysis, deep learning and explainable AI, with a focus on tools that are reliable and interpretable enough for clinical screening. My M.Sc. at IIT, Jahangirnagar University is supervised by Dr. M. Shamim Kaiser and Prof. Mohammad Abu Yousuf.</p>
+    <p>Before research, I spent time as an R&amp;D Engineer on the routing team at Shanghai BDCOM, writing network device software. I started in competitive programming and reached Codeforces Specialist. I enjoy teaching and have run programming and machine learning workshops.</p>
+   </div>
+  </div>
+  <h3 style="margin:30px 0 14px">Updates</h3>
+  <div class="item"><div class="when">2026</div><div>First-author paper published in <i>Expert Systems with Applications</i> (Elsevier, Q1).</div></div>
+  <div class="item"><div class="when">2025</div><div>TriFuse-DR, my diabetic retinopathy grading paper, accepted at TEHI 2025.</div></div>
+ </div>
+</div></div></section>
 
- <!-- style switcher Javascript file  -->
- <script src="JS/style-switcher.js"></script>
+<section id="research"><div class="wrap"><div class="row">
+ <h2>Research interests</h2>
+ <div>
+  <ul class="tags">
+   <li>Medical image analysis</li><li>Explainable AI</li><li>Deep learning</li><li>Computer vision</li><li>Clinical decision support with LLMs</li><li>Ordinal classification</li><li>Mixture-of-experts</li>
+  </ul>
+  <p>I want screening models whose predictions come with evidence a clinician can inspect: saliency maps, grade-aware outputs, and error behavior that matches how clinical severity scales actually work.</p>
+ </div>
+</div></div></section>
 
- <!-- email js  -->
- <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="js/email.js"></script>
+<section id="publications"><div class="wrap"><div class="row">
+ <h2>Publications</h2>
+ <div>
+  <div class="item"><div class="when">2026</div><div>
+   <!-- TODO: replace this line with the exact paper title and full author list -->
+   <h3>3D MRI reconstruction and brain tumor diagnosis with deep learning and explainable AI</h3>
+   <p class="meta"><i>Expert Systems with Applications</i> (Elsevier, Q1). First author.</p>
+   <p><a href="https://doi.org/10.1016/j.eswa.2026.131513">DOI 10.1016/j.eswa.2026.131513</a></p>
+  </div></div>
+  <div class="item"><div class="when">2025</div><div>
+   <!-- TODO: replace with the exact paper title and author list -->
+   <h3>TriFuse-DR: diabetic retinopathy grading</h3>
+   <p class="meta">TEHI 2025 (Scopus-indexed). First author. Accepted.</p>
+  </div></div>
+  <p class="meta">The full list is on <a href="https://scholar.google.com/citations?user=uJrXkCUAAAAJ">Google Scholar</a> and <a href="https://orcid.org/0009-0003-5318-232X">ORCID</a>.</p>
+ </div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><div class="row">
+ <h2>Projects</h2>
+ <div>
+  <div class="item"><div class="when">Ongoing</div><div>
+   <h3>OCMoE: ordinal classification mixture-of-experts</h3>
+   <p>A mixture-of-experts model that respects the ordered nature of clinical severity grades, aimed at screening tasks.</p>
+  </div></div>
+  <div class="item"><div class="when">2025</div><div>
+   <h3>TriFuse-DR</h3>
+   <p>Fusing several backbone networks to grade diabetic retinopathy from fundus images.</p>
+  </div></div>
+  <div class="item"><div class="when">2026</div><div>
+   <h3>3D MRI reconstruction and tumor diagnosis</h3>
+   <p>Reconstructing 3D volumes from MRI and classifying brain tumors, with explanations of the model’s decisions.</p>
+  </div></div>
+  <p class="meta">Code and other work: <a href="https://github.com/Rakhibul-Hasan">github.com/Rakhibul-Hasan</a></p>
+ </div>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><div class="row">
+ <h2>Experience</h2>
+ <div>
+  <!-- TODO: add start and end dates -->
+  <div class="item"><div class="when">Industry</div><div>
+   <h3>R&amp;D Engineer, Routing team</h3>
+   <p class="meta">Shanghai BDCOM Ltd</p>
+   <p>Built network device software, including routing technologies and embedded systems.</p>
+  </div></div>
+  <div class="item"><div class="when">Since 2019</div><div>
+   <h3>Tutor and workshop instructor</h3>
+   <p>Taught physics and mathematics to SSC, HSC and admission candidates, and led programming and machine learning workshops.</p>
+  </div></div>
+ </div>
+</div></div></section>
+
+<section id="education"><div class="wrap"><div class="row">
+ <h2>Education</h2>
+ <div>
+  <div class="item"><div class="when">In progress</div><div>
+   <h3>M.Sc., Institute of Information Technology</h3>
+   <p class="meta">Jahangirnagar University, Bangladesh</p>
+   <p>Supervisors: Dr. M. Shamim Kaiser and Prof. Mohammad Abu Yousuf.</p>
+  </div></div>
+  <div class="item"><div class="when">2020 to 2024</div><div>
+   <!-- TODO: confirm graduation year and that the CGPA belongs to the B.Sc. -->
+   <h3>B.Sc., Institute of Information Technology</h3>
+   <p class="meta">Jahangirnagar University, Bangladesh. CGPA 3.91 / 4.00</p>
+  </div></div>
+  <div class="item"><div class="when">2007 to 2019</div><div>
+   <h3>SSC and HSC, Science</h3>
+   <p class="meta">Tepamadhupur BL High School; Kaunia College, Rangpur. GPA 5.00 / 5.00 in both</p>
+  </div></div>
+ </div>
+</div></div></section>
+
+<section id="awards"><div class="wrap"><div class="row">
+ <h2>Awards and skills</h2>
+ <div>
+  <div class="item"><div class="when">Fellowship</div><div><h3>NST Fellowship</h3><p>Ministry of Science and Technology, Bangladesh.</p></div></div>
+  <div class="item"><div class="when">Contests</div><div><h3>Codeforces Specialist; ICPC regional Honorable Mentions</h3><p>Multiple regional contests.</p></div></div>
+  <div class="skillgrp" style="margin-top:8px"><h3>Machine learning</h3>
+   <ul class="tags"><li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>OpenCV</li><li>scikit-learn</li></ul></div>
+  <div class="skillgrp"><h3>Systems and tools</h3>
+   <ul class="tags"><li>C</li><li>C++</li><li>Linux</li><li>Git</li><li>LaTeX</li><li>HTML, CSS, JavaScript</li></ul></div>
+ </div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap"><div class="row">
+ <h2>Contact</h2>
+ <div>
+  <p>For PhD supervision, collaboration or questions about my papers, email me.</p>
+  <a class="big" href="mailto:rakhibulhasan98@gmail.com">rakhibulhasan98@gmail.com</a>
+  <ul class="links">
+   <li><a href="https://scholar.google.com/citations?user=uJrXkCUAAAAJ">Google Scholar</a></li>
+   <li><a href="https://orcid.org/0009-0003-5318-232X">ORCID</a></li>
+   <li><a href="https://github.com/Rakhibul-Hasan">GitHub</a></li>
+   <li><a href="https://www.researchgate.net/profile/Md-Hasan-1355">ResearchGate</a></li>
+   <li><a href="https://www.linkedin.com/in/rakhibul-hasan-shaudho-7ab26b1a">LinkedIn</a></li>
+  </ul>
+ </div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Md. Rakhibul Hasan. Jahangirnagar University, Savar, Dhaka.</div></footer>
+
+<script>
+(function(){
+ var root=document.documentElement,btn=document.getElementById('theme');
+ try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
+ btn.addEventListener('click',function(){
+  var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+  var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+  try{localStorage.setItem('theme',next)}catch(e){}
+ });
+ var nav=document.getElementById('nav'),menu=document.getElementById('menu');
+ menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+ nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+ var scan=document.getElementById('scan');
+ scan.addEventListener('pointermove',function(e){
+  var r=scan.getBoundingClientRect();scan.classList.remove('idle');
+  scan.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');
+  scan.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%');
+ });
+ var links=[].slice.call(document.querySelectorAll('nav a'));
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){
+   if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}
+  })},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+ }
+ document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
